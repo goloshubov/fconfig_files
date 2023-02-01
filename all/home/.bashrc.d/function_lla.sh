@@ -1,0 +1,3 @@
+function lla {
+  cd "$(llama "$@")"
+}

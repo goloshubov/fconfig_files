@@ -1,0 +1,12 @@
+[user]
+  name = Dmitry Goloshubov
+  email = goloshubov@gmail.com
+
+[core]
+  editor = vim
+
+
+[merge]
+	conflictstyle = diff3
+[pull]
+	rebase = false

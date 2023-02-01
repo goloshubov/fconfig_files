@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#exiftool -all= $1
+
+echo -e "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" | xargs -i exiftool -all= "{}"

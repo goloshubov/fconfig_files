@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=scrcpy
+Comment=scrcpy
+Exec=sudo /usr/bin/scrcpy -K -m 1024
+Icon=/usr/share/icons/hicolor/256x256/apps/scrcpy.png
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application;

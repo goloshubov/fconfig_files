@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -n "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" ]; then
+
+    cd $( dirname "'$1'" )
+    filename=$( basename "'$1'" )
+    gnome-terminal --title "vim $filename" -- bash -c "vim $filename"
+    #tilix -p Default -e "vim '$1'"
+fi
+
+
