@@ -68,6 +68,7 @@ function! OpenInTab(node)
     call a:node.activate({'reuse': 'all', 'where': 't'})
 endfunction
 
+let NERDTreeShowHidden=1
 
 
 " ---- wl-copy FIXME -----
