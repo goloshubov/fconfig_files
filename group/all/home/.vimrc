@@ -8,6 +8,7 @@ set mouse=a
 "map <F3> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=a"<CR>
 map <F3> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=a"<CR>
 map <F4> :set number! <CR>
+map <F5> :set nohlsearch! <CR>
 set et ts=2 ai sw=2 nu
 "set et ts=2 ai sw=2 
 
