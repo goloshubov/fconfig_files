@@ -16,7 +16,7 @@ fi
 
 export ANDROID_HOME="~/Android/Sdk"
 export GOPATH="$HOME/go"
-export PATH="$HOME/bin:HOME/.local/bin:$HOME/.cargo/bin:$PATH:$GOPATH/bin:~/Android/Sdk/platform-tools:${KREW_ROOT:-$HOME/.krew}/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:$GOPATH/bin:~/Android/Sdk/platform-tools:${KREW_ROOT:-$HOME/.krew}/bin"
 
 export MOZ_ENABLE_WAYLAND=1
 
