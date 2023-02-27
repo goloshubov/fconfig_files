@@ -1,5 +1,2 @@
-dotfiles
-
-
-https://github.com/goloshubov/fconfig
+dotfiles for fconfig https://github.com/goloshubov/fconfig
 
