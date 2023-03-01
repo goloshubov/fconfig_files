@@ -12,8 +12,8 @@ alias grep_teal='GREP_COLORS="ms=01;36" grep --color=auto'
 alias grep_lgrey='GREP_COLORS="ms=01;37" grep --color=auto'
 
 
-alias fconfig_local_ws='git pull ~/git/github/fconfig/ && ansible-playbook -i ~/git/github/fconfig/inventory_workstations.ini ~/git/github/fconfig/workstation.yml -e ansible_connection=local --limit $(hostname)'
-alias fconfig_local_ws_dotfiles='git pull ~/git/github/fconfig/ && ansible-playbook -i ~/git/github/fconfig/inventory_workstations.ini ~/git/github/fconfig/workstation.yml -e ansible_connection=local --limit $(hostname) --tags dotfiles'
+alias fconfig_local_ws='git -C ~/git/github/fconfig/ pull && ansible-playbook -i ~/git/github/fconfig/inventory_workstations.ini ~/git/github/fconfig/workstation.yml -e ansible_connection=local --limit $(hostname)'
+alias fconfig_local_ws_dotfiles='git -C ~/git/github/fconfig/ pull && ansible-playbook -i ~/git/github/fconfig/inventory_workstations.ini ~/git/github/fconfig/workstation.yml -e ansible_connection=local --limit $(hostname) --tags dotfiles'
 
-alias fconfig_local_srv='git pull ~/git/github/fconfig/ && ansible-playbook -i ~/git/github/fconfig/inventory_servers.ini ~/git/github/fconfig/server.yml -e ansible_connection=local --limit $(hostname)'
-alias fconfig_local_srv_dotfiles='git pull ~/git/github/fconfig/ && ansible-playbook -i ~/git/github/fconfig/inventory_servers.ini ~/git/github/fconfig/server.yml -e ansible_connection=local --limit $(hostname) --tags dotfiles'
+alias fconfig_local_srv='git -C ~/git/github/fconfig/ pull && ansible-playbook -i ~/git/github/fconfig/inventory_servers.ini ~/git/github/fconfig/server.yml -e ansible_connection=local --limit $(hostname)'
+alias fconfig_local_srv_dotfiles='git -C ~/git/github/fconfig/ pull && ansible-playbook -i ~/git/github/fconfig/inventory_servers.ini ~/git/github/fconfig/server.yml -e ansible_connection=local --limit $(hostname) --tags dotfiles'
