@@ -12,3 +12,5 @@ alias grep_teal='GREP_COLORS="ms=01;36" grep --color=auto'
 alias grep_lgrey='GREP_COLORS="ms=01;37" grep --color=auto'
 
 
+alias fconfig_local_ws='git pull /home/goloshubov/git/github/fconfig/ && ansible-playbook -i /home/goloshubov/git/github/fconfig/inventory_workstations.ini /home/goloshubov/git/github/fconfig/workstation.yml -e ansible_connection=local --limit $(hostname)'
+alias fconfig_local_srv='git pull /home/goloshubov/git/github/fconfig/ && ansible-playbook -i /home/goloshubov/git/github/fconfig/inventory_servers.ini /home/goloshubov/git/github/fconfig/server.yml -e ansible_connection=local --limit $(hostname)'
