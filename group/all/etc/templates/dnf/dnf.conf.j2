@@ -7,5 +7,5 @@ clean_requirements_on_remove=True
 best=False
 skip_if_unavailable=True
 
-proxy=http://192.168.35.1:3128
+proxy={{ dnf_proxy_protocol }}://{{ dnf_proxy_host }}:{{ dnf_proxy_port }}
 max_parallel_downloads=10
