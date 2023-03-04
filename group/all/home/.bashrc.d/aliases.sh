@@ -17,5 +17,3 @@ alias fconfig_local_ws="$FCONFIG_PULL && $FCONFIG_WS"
 alias fconfig_local_ws_dotfiles="$FCONFIG_PULL && $FCONFIG_WS --tags dotfiles"
 alias fconfig_local_srv="$FCONFIG_PULL && $FCONFIG_SERVER"
 alias fconfig_local_srv_dotfiles="$FCONFIG_PULL && $FCONFIG_SERVER --tags dotfiles"
-
-#test
