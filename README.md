@@ -1,2 +1,17 @@
-dotfiles for fconfig https://github.com/goloshubov/fconfig
+The source of configs/dotfiles for fconfig playbook (https://github.com/goloshubov/fconfig)
 
+## 
+Here is expected repo directory structure, all supported dirs (dconf, etc, home) are not mandatory:
+```
+.
+├── group
+│   └── <groupname>
+│       ├── dconf
+│       ├── etc
+│       └── home
+└── host
+    └── <hostname>
+        ├── dconf
+        ├── etc
+        └── home
+```
