@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=scrcpy
 Comment=scrcpy
-Exec=/usr/bin/scrcpy -K -m 1024
+Exec=/usr/bin/scrcpy -K -m 1024 -S --power-off-on-close
 Icon=/usr/share/icons/hicolor/256x256/apps/scrcpy.png
 Terminal=false
 Type=Application
