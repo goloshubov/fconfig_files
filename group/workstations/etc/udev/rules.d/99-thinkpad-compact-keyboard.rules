@@ -1,2 +1,0 @@
-SUBSYSTEM=="hid", ATTRS{idVendor}=="17ef", ATTRS{idProduct}=="604*", \
-    RUN += "/bin/sh -c 'chmod 0666 \"/sys/$devpath/fn_lock\"'"
