@@ -2,7 +2,6 @@
 Version=1.0
 Name=Irexec daemon
 Comment=Handle IR command server
-Name[se]=Hantera IR-kommandon
 Exec=irexec
 Icon=applications-system
 Terminal=false
