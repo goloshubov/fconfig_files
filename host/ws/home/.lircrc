@@ -1,0 +1,92 @@
+# poweroff
+begin
+    prog   = irexec
+    button = KEY_POWER
+    config = sudo poweroff
+end
+
+begin
+    prog   = irexec
+    button = QUICK_POWER
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key KEY_LEFTMETA+KEY_PAGEUP || xdotool key Super_L+Page_Up    
+    config = sudo ydotool key 125:1 104:1 125:0 104:0
+    flags  = quit
+end
+
+# lock the screen
+begin
+    prog   = irexec
+    button = NOISE_OFF
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key KEY_LEFTMETA+l || xdotool key Super_L+l
+    config = sudo ydotool key 125:1 38:1 125:0 38:0
+    flags  = quit
+end
+
+begin
+    prog   = irexec
+    button = WIFI
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key KEY_LEFTMETA+KEY_PAGEDOWN|| xdotool key Super_L+Page_Down
+    config = sudo ydotool key 125:1 109:1 125:0 109:0
+    flags  = quit
+end
+
+begin
+    prog   = irexec
+    button = AP_LAUNCH
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key Alt+F4 || xdotool key Alt+F4
+    config = sudo ydotool key Alt+F4 56:1 62:1 56:0 62:0
+    flags  = quit
+end
+
+begin
+    prog   = irexec
+    button = KEY_MAX
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key f || xdotool key f
+    config = sudo ydotool key 33:1 33:0
+    flags  = quit
+end
+
+
+
+
+begin
+    prog   = irexec
+    button = KEY_PLAYPAUSE
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key KEY_SPACE || xdotool key space
+    config = sudo ydotool key 57:1 57:0
+    flags  = quit
+end
+
+# +-
+begin
+    prog   = irexec
+    button = KEY_KPPLUS
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key Up || xdotool key Up
+    config = sudo ydotool key 103:1 103:0
+    flags  = quit
+end
+begin
+    prog   = irexec
+    button = KEY_KPMINUS
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key Down || xdotool key Down
+    config = sudo ydotool key Down 108:1 108:0
+    flags  = quit
+end
+
+# <>
+begin
+    prog   = irexec
+    button = REV
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key Left || xdotool key Left
+    config = sudo ydotool key 105:1 105:0
+    flags  = quit
+end
+begin
+    prog   = irexec
+    button = KEY_FORWARD
+#    config = env DISPLAY=:0 xdotool key Right
+#    config = env DISPLAY=:0 | grep XDG_SESSION_TYPE=wayland && sudo ydotool key Right || xdotool key Right
+    config = sudo ydotool key 106:1 106:0
+    flags  = quit
+end
+
