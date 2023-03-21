@@ -1,2 +1,2 @@
 SUBSYSTEM=="hid", ATTRS{idVendor}=="17ef", ATTRS{idProduct}=="604*", \
-    RUN += "/bin/sh -c 'chgrp {{ user_primary_group }} \"/sys/$devpath/fn_lock\"'"
+    RUN += "/bin/sh -c 'chown {{ user_name }}:{{ user_primary_group }} \"/sys/$devpath/fn_lock\"'"
