@@ -13,8 +13,8 @@ alias grep_lgrey='GREP_COLORS="ms=01;37" grep --color=always'
 
 
 FCONFIG_PULL='git -C ~/git/github/fconfig/ pull'
-FCONFIG_LOCAL_WS='ansible-playbook -i ~/git/github/fconfig/hosts_workstations ~/git/github/fconfig/workstation.yml -e ansible_connection=local --limit $(hostname)'
-FCONFIG_LOCAL_SERVER='ansible-playbook -i ~/git/github/fconfig/hosts_servers ~/git/github/fconfig/server.yml -e ansible_connection=local --limit $(hostname)'
+FCONFIG_LOCAL_WS='ansible-playbook -i ~/git/github/fconfig/inventories ~/git/github/fconfig/workstation.yml -e ansible_connection=local --limit $(hostname)'
+FCONFIG_LOCAL_SERVER='ansible-playbook -i ~/git/github/fconfig/inventories ~/git/github/fconfig/server.yml -e ansible_connection=local --limit $(hostname)'
 alias fconfig_local_ws="$FCONFIG_PULL && $FCONFIG_LOCAL_WS"
 alias fconfig_local_ws_dotfiles="$FCONFIG_PULL && $FCONFIG_LOCAL_WS --tags dotfiles"
 alias fconfig_local_srv="$FCONFIG_PULL && $FCONFIG_LOCAL_SERVER"
