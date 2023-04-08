@@ -1,7 +1,7 @@
 [lircd]
 nodaemon        = False
 driver          = asusdh
-device          = /dev/usb/hiddev0
+device          = {{ lirc_device }}
 output          = /var/run/lirc/lircd
 pidfile         = /var/run/lirc/lircd.pid
 plugindir       = /usr/lib64/lirc/plugins
@@ -15,4 +15,4 @@ uinput          = False
 nodaemon        = False
 
 [modinit]
-code = /usr/bin/setfacl -m g:lirc:rw /dev/usb/hiddev0
+code = /usr/bin/setfacl -m g:lirc:rw {{ lirc_device }}
