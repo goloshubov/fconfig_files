@@ -45,14 +45,13 @@ au BufRead,BufNewFile *.yml set filetype=yaml.ansible
 
 " ---- netrw -----
 "map <F2> <ESC> :Lexplore<CR>
-"map <F2> :Lexplore<CR>
+map <F2> :Lexplore<CR>
 
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_winsize = 18    " width in percent
 let g:netrw_browse_split=3  " open in tab
 let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree dir view
-"let g:netrw_liststyle=4     " one dir view
 " ret g:netrw_list_hide=netrw_gitignore#Hide()
 " let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
@@ -62,14 +61,14 @@ let g:netrw_liststyle=3     " tree dir view
 " Start NERDTree and put the cursor back in the other window.
 "autocmd VimEnter * NERDTree | wincmd p
 
-map <F2> :NERDTreeToggle <CR>
-
-autocmd VimEnter * call NERDTreeAddKeyMap({ 'key': '<2-LeftMouse>', 'scope': "FileNode", 'callback': "OpenInTab", 'override':1 })
-function! OpenInTab(node)
-    call a:node.activate({'reuse': 'all', 'where': 't'})
-endfunction
-
-let NERDTreeShowHidden=1
+"map <F2> :NERDTreeToggle <CR>
+"
+"autocmd VimEnter * call NERDTreeAddKeyMap({ 'key': '<2-LeftMouse>', 'scope': "FileNode", 'callback': "OpenInTab", 'override':1 })
+"function! OpenInTab(node)
+"    call a:node.activate({'reuse': 'all', 'where': 't'})
+"endfunction
+"
+"let NERDTreeShowHidden=1
 
 
 " ---- wl-copy FIXME -----
