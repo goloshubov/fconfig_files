@@ -3,6 +3,10 @@
   "segments": {
     "left": [
       {
+        "function": "powerline_k8s.k8s",
+        "priority": 40
+      },
+      {
         "function": "powerline.segments.shell.mode"
       },
       {
@@ -37,12 +41,6 @@
         "function": "powerline.segments.common.vcs.branch",
         "priority": 40
       }
-    ],
-    "right": [
-          {
-            "function": "powerline_k8s.k8s",
-            "priority": 40
-          }
     ]
   }
 }
