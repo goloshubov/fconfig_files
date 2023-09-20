@@ -79,3 +79,7 @@ autocmd BufNewFile,BufRead Dockerfile* set syntax=dockerfile
 autocmd BufNewFile,BufRead *sonnet set syntax=json
 autocmd BufNewFile,BufRead *.j2 set syntax=jinja2
 
+
+" highlight unwanted spaces
+map <F6> :set list! <CR>
+set list listchars=tab:\|_,trail:·
