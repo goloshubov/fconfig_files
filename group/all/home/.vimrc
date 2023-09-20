@@ -56,7 +56,7 @@ au BufRead,BufNewFile *.yml set filetype=yaml.ansible
 
 map <F2> :NERDTreeToggle <CR>
 
-#let NERDTreeMapOpenInTab='<ENTER>'
+" let NERDTreeMapOpenInTab='<ENTER>'
 autocmd VimEnter * call NERDTreeAddKeyMap({ 'key': '<2-LeftMouse>', 'scope': "FileNode", 'callback': "OpenInTab", 'override':1 })
 function! OpenInTab(node)
     call a:node.activate({'reuse': 'all', 'where': 't'})
