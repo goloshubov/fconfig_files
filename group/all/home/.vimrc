@@ -40,12 +40,13 @@ au BufRead,BufNewFile *.yml set filetype=yaml.ansible
 " ---- netrw -----
 "map <F2> <ESC> :Lexplore<CR>
 "map <F2> :Lexplore<CR>
-"
-"let g:netrw_banner=0        " disable annoying banner
-"let g:netrw_winsize = 18    " width in percent
+map <S-F2> :Explore <CR>
+
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_winsize = 18    " width in percent
 "let g:netrw_browse_split=3  " open in tab
-"let g:netrw_altv=1          " open splits to the right
-"let g:netrw_liststyle=3     " tree dir view
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree dir view
 " ret g:netrw_list_hide=netrw_gitignore#Hide()
 " let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
