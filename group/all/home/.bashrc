@@ -11,7 +11,8 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 
-#stty -ixon
+# usefull for forward search Ctlr-S (while in reverse search Ctrl-R)
+stty -ixon
 
 
 export ANDROID_HOME="~/Android/Sdk"
