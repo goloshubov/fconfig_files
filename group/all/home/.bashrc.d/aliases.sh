@@ -1,3 +1,8 @@
+alias h10="history 10"
+alias h25="history 25"
+alias h50="history 50"
+
+
 alias cpv='rsync -ah --info=progress2'
 
 
