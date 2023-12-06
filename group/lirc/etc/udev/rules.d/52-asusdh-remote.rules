@@ -1,0 +1,1 @@
+ATTRS{idVendor}=="1130", ATTRS{idProduct}=="cc00", SUBSYSTEMS=="usb", ACTION=="add", MODE="0660", GROUP="lirc"
