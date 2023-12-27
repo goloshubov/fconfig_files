@@ -81,3 +81,14 @@ autocmd BufNewFile,BufRead *.j2 set syntax=jinja2
 " ---- highlight unwanted spaces -----
 map <F6> :set list! <CR>
 set list listchars=tab:\|_,trail:·
+
+" --- fix paste issue
+map <F7> :set paste! <CR>
+
+" ---- folding ----
+""setlocal foldmethod=syntax
+""setlocal foldlevelstart=99
+"set foldmethod=indent
+"set foldnestmax=10
+"set nofoldenable
+"set foldlevel=2
