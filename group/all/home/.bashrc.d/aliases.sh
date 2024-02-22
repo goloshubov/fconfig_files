@@ -3,7 +3,7 @@ alias h25="history 25"
 alias h50="history 50"
 
 
-alias cpv='rsync -ah --info=progress2'
+alias cpv='rsync -haiv --info=progress2'
 
 
 alias grep_dgrey='GREP_COLORS="ms=01;30" grep --color=always'
