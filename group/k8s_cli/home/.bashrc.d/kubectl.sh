@@ -1,4 +1,5 @@
 alias k=kubectl
+alias kk=kubecolor
 alias kaf="kubectl apply -f"
 
 source <(kubectl completion bash)
