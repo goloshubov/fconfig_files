@@ -92,3 +92,6 @@ map <F7> :set paste! <CR>
 "set foldnestmax=10
 "set nofoldenable
 "set foldlevel=2
+
+"---- fzf ----
+map <F12> :FZF <CR>
