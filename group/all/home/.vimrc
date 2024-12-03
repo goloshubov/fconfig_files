@@ -12,8 +12,7 @@ map <F5> :set nohlsearch! <CR>
 set et ts=2 ai sw=2 nu
 "set et ts=2 ai sw=2 
 
-"set laststatus=2 " Always display the statusline in all windows
-set laststatus=0
+set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
