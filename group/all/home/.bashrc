@@ -8,8 +8,6 @@ fi
 # usefull for forward search Ctlr-S (while in reverse search Ctrl-R)
 stty -ixon
 
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-
 export EDITOR=vim
 
 if [ -d ~/.bashrc.d ]; then
@@ -18,3 +16,4 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi
 
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
