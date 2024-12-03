@@ -10,4 +10,4 @@ alias k_po_res="kubectl get pod -o jsonpath='{range .items[*]}{\"\nPod: \"}{.met
 alias k_po_img="kubectl get pod -o jsonpath='{range .items[*]}{\"\nPod: \"}{.metadata.name}{\"\nNamespace: \"}{.metadata.namespace}{range .spec.containers[*]}{\"\n\tContainer: \"}{.name}{\"\n\"}{\"\t\tImage:\"}{.image}{end}{\"\n\"}{end}'"
 alias k_rs_img="kubectl get rs -o jsonpath='{range .items[*]}{\"\nRS: \"}{.metadata.name}{\"\nNamespace: \"}{.metadata.namespace}{range .spec.template.spec.containers[*]}{\"\n\tContainer: \"}{.name}{\"\n\"}{\"\t\tImage:\"}{.image}{end}{\"\n\"}{end}'"
 
-export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
+PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
