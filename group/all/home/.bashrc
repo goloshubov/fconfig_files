@@ -9,6 +9,7 @@ fi
 stty -ixon
 
 export EDITOR=vim
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 if [ -d ~/.bashrc.d ]; then
   for file in ~/.bashrc.d/*.sh; do
@@ -16,4 +17,3 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi
 
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
