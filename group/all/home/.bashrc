@@ -17,6 +17,6 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi
 
-# duplicate path
+# deduplicate path
 PATH="$(echo -n $PATH | awk -v RS=: '!($0 in a) {a[$0]; printf("%s%s", length(a) > 1 ? ":" : "", $0)}')"
 export PATH
