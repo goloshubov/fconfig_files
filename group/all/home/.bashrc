@@ -17,7 +17,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:$GOPATH/bin:~/And
 export EDITOR=vim
 
 if [ -d ~/.bashrc.d ]; then
-  for file in ~/.bashrc.d/*; do
+  for file in ~/.bashrc.d/*.sh; do
     source "$file"
   done
 fi
