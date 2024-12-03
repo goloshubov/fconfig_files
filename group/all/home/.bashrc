@@ -8,7 +8,7 @@ fi
 # usefull for forward search Ctlr-S (while in reverse search Ctrl-R)
 stty -ixon
 
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:$GOPATH/bin:~/Android/Sdk/platform-tools:${KREW_ROOT:-$HOME/.krew}/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 export EDITOR=vim
 
