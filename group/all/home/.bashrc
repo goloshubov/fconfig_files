@@ -12,9 +12,10 @@ export EDITOR=vim
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 if [ -d ~/.bashrc.d ]; then
-  for file in ~/.bashrc.d/*.sh; do
-    source "$file"
+  for i in ~/.bashrc.d/*.sh; do
+    source $i
   done
+  unset i
 fi
 
 # deduplicate path
