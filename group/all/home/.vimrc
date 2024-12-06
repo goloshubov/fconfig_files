@@ -5,6 +5,8 @@
 colorscheme onedark
 
 set mouse=a
+set hlsearch
+
 "map <F3> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 map <F3> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=a"<CR>
 map <F4> :set number! <CR>
