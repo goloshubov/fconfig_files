@@ -1,2 +1,2 @@
-SUBSYSTEM=="hid", ATTRS{idVendor}=="17ef", ATTRS{idProduct}=="604*", \
-    RUN += "/bin/sh -c 'chown {{ user_name }}:{{ user_primary_group }} \"/sys/$devpath/fn_lock\"'"
+SUBSYSTEM=="input", DRIVERS=="lenovo", RUN += "/bin/sh -c 'FILE=$(find /sys/devices/ -name fn_lock 2>/dev/null); test -f $FILE && chown goloshubov $FILE && ln -f -s $FILE /dev/fnlock-switch'"
+
