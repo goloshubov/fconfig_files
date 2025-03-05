@@ -43,5 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 
 font-size = 10
+
+# ghostty +list-themes
 #theme = Operator Mono Dark
 theme = Adwaita Dark
