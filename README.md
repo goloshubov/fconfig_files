@@ -1,6 +1,6 @@
-dotfiles and system configs
+dotfiles and system configs 
 
-The source of configs/dotfiles for fconfig playbook (https://github.com/goloshubov/fconfig)
+supposed to use with fconfig playbook (https://github.com/goloshubov/fconfig)
 
 NOTE: this setup is only intended as an example.
 
