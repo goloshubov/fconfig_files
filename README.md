@@ -1,3 +1,5 @@
+dotfiles and system configs
+
 The source of configs/dotfiles for fconfig playbook (https://github.com/goloshubov/fconfig)
 
 NOTE: this setup is only intended as an example.
