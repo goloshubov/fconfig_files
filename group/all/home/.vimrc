@@ -3,6 +3,7 @@
 "colorscheme solarized8_high
 "colorscheme sonokai
 colorscheme onedark
+syntax on
 
 set mouse=a
 set hlsearch
