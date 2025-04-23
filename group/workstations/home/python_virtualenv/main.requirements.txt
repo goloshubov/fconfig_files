@@ -1,0 +1,8 @@
+pre-commit
+ansible
+ansible-lint
+ansible-runner-http
+argcomplete
+requests
+kubernetes
+pip-system-certs
