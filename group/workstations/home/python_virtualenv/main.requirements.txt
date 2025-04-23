@@ -6,3 +6,4 @@ argcomplete
 requests
 kubernetes
 pip-system-certs
+powerline-status
