@@ -1,0 +1,52 @@
+{
+  "segments": {
+    "above": [
+      {
+        "left": [
+          {
+            "type": "string",
+            "draw_soft_divider": false,
+            "draw_hard_divider": false,
+            "contents": "┌ ",
+            "highlight_groups": ["j:blue"]
+          },
+          {
+            "function": "powerline.segments.shell.cwd",
+            "priority": 10,
+            "args": {
+              "dir_shorten_len": 30,
+              "dir_limit_depth": 4
+            }
+          }
+        ]
+      }
+    ],
+    "left": [
+      {
+        "type": "string",
+        "draw_soft_divider": false,
+        "draw_hard_divider": false,
+        "contents": "└ ",
+        "highlight_groups": ["j:red"]
+      },
+      {
+        "function": "powerline_k8s.k8s",
+        "priority": 40
+      },
+      {
+        "function": "powerline.segments.common.env.virtualenv",
+        "priority": 20
+      },
+      {
+        "function": "powerline.segments.common.vcs.branch",
+        "priority": 10,
+        "args": {
+          "status_colors": "True"
+        }
+      }
+    ],
+    "right": [
+    ]
+  }
+}
+

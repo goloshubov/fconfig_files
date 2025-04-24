@@ -8,6 +8,7 @@
 		"warning:regular":            { "fg": "white", "bg": "brightred", "attrs": ["bold"] },
 		"critical:failure":           { "fg": "white", "bg": "darkestred", "attrs": [] },
 		"critical:success":           { "fg": "white", "bg": "darkestgreen", "attrs": [] },
+		"critical:success_rev":       { "bg": "gray1", "fg": "darkestgreen", "attrs": [] },
 		"background":                 { "fg": "white", "bg": "gray0", "attrs": [] },
 		"background:divider":         { "fg": "gray5", "bg": "gray0", "attrs": [] },
 		"session":                    { "fg": "black", "bg": "gray10", "attrs": ["bold"] },
@@ -42,9 +43,9 @@
 		"player":                     { "fg": "gray10", "bg": "black", "attrs": [] },
 		"user":                       { "fg": "white", "bg": "darkblue", "attrs": ["bold"] },
 		"branch":                     { "fg": "gray9", "bg": "gray2", "attrs": [] },
-		"branch_dirty":               { "fg": "skyblue1", "bg": "gray2", "attrs": [] },
+		"branch_dirty":               { "fg": "brightyellow", "bg": "gray2", "attrs": [] },
 		"branch_clean":               { "fg": "gray9", "bg": "gray2", "attrs": [] },
-		"branch:divider":             { "fg": "red", "bg": "blue", "attrs": [] },
+		"branch:divider":             { "fg": "gray7", "bg": "gray2", "attrs": [] },
 		"stash":                      "branch_dirty",
 		"stash:divider":              "branch:divider",
 		"cwd":                        "information:additional",
@@ -53,9 +54,13 @@
 		"virtualenv":                 { "fg": "white", "bg": "darkcyan", "attrs": [] },
 		"attached_clients":           { "fg": "gray8", "bg": "gray0", "attrs": [] },
 		"workspace":                  "information:regular",
-    "k8s":                       { "fg": "solarized:blue", "bg": "gray1", "attrs": [] },
-    "k8s_context":               { "fg": "gray10", "bg": "gray1", "attrs": [] },
-    "k8s_namespace":             { "fg": "gray7",          "bg": "gray1", "attrs": [] },
-    "k8s:divider":               { "fg": "white",          "bg": "gray1", "attrs": [] }
+    "k8s":                        { "fg": "solarized:blue", "bg": "gray1", "attrs": [] },
+    "k8s_namespace":              { "fg": "solarized:red",  "bg": "gray1", "attrs": [] },
+    "k8s_context":                { "fg": "solarized:blue", "bg": "gray1", "attrs": [] },
+    "k8s:divider":                { "fg": "gray4",          "bg": "gray1", "attrs": [] },
+    "j:red":                   { "fg": "solarized:red",   "bg": "gray1", "attrs": [] },
+    "j:blue":                  { "fg": "darkblue",   "bg": "gray4", "attrs": [] },
+    "j:green":                 { "fg": "solarized:green", "bg": "gray1", "attrs": [] }
+
 	}
 }
