@@ -27,7 +27,7 @@
         "draw_soft_divider": false,
         "draw_hard_divider": false,
         "contents": "└ ",
-        "highlight_groups": ["j:red"]
+        "highlight_groups": ["j:green"]
       },
       {
         "function": "powerline_k8s.k8s",
