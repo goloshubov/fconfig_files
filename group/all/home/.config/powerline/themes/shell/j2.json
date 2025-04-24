@@ -31,11 +31,11 @@
       },
       {
         "function": "powerline_k8s.k8s",
-        "priority": 40
+        "priority": 10
       },
       {
         "function": "powerline.segments.common.env.virtualenv",
-        "priority": 20
+        "priority": 10
       },
       {
         "function": "powerline.segments.common.vcs.branch",
@@ -46,6 +46,14 @@
       }
     ],
     "right": [
+      {
+        "function": "powerline.segments.shell.jobnum",
+        "priority": 20
+      },
+      {
+        "function": "powerline.segments.shell.last_status",
+        "priority": 20
+      }
     ]
   }
 }
