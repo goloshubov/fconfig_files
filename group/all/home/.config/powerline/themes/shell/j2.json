@@ -17,6 +17,13 @@
               "dir_shorten_len": 30,
               "dir_limit_depth": 4
             }
+          },
+          {
+            "function": "powerline.segments.common.vcs.branch",
+            "priority": 10,
+            "args": {
+              "status_colors": "True"
+            }
           }
         ]
       }
@@ -36,13 +43,6 @@
       {
         "function": "powerline.segments.common.env.virtualenv",
         "priority": 10
-      },
-      {
-        "function": "powerline.segments.common.vcs.branch",
-        "priority": 10,
-        "args": {
-          "status_colors": "True"
-        }
       }
     ],
     "right": [
