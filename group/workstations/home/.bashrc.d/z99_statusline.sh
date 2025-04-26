@@ -14,11 +14,12 @@ K8S_COLOR=$On_Blue
 JOBS_COLOR=$On_Red
 ECODE_COLOR=$On_IRed
 #PROMPT_COLOR=""
+NO_COLOR="\e[0m"
 
 LAST_ECODE="0"
 
 pwd_segment() {
-  echo -e "${PWD_COLOR}┌ ${PWD/#$HOME/\~} \e[0m"
+  echo -e "${PWD_COLOR}┌ ${PWD/#$HOME/\~} ${NO_COLOR}"
 }
 
 git_segment() {
@@ -26,12 +27,12 @@ git_segment() {
   if [ ! -z "$BRANCH" ]; then
     if [ -z "$(git status -s)" ]; then
       if [ -z "$( git status | grep -iE 'ahead|behind' )" ]; then
-        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} \e[0m"
+        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} ${NO_COLOR}"
       else
-        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} * \e[0m"
+        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} * ${NO_COLOR}"
       fi
     else
-      echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} \e[0m"
+      echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} ${NO_COLOR}"
     fi
   else
     echo ""
@@ -50,7 +51,7 @@ k8s_segment() {
   ctx=$(grep 'current-context'  ~/.kube/config | awk '{ print $2 }')
   ns=$(kubectl config get-contexts $ctx --no-headers=true | awk '{ print $5 }')
   K8S=" ☸  ${ctx}:${ns} "
-  echo -e "${K8S_COLOR}${K8S}\e[0m"
+  echo -e "${K8S_COLOR}${K8S}${NO_COLOR}"
 }
 
 venv_segment() {
@@ -60,12 +61,12 @@ venv_segment() {
   else 
     VENV=""
   fi
-  echo -e "${VENV_COLOR}${VENV}\e[0m"
+  echo -e "${VENV_COLOR}${VENV}${NO_COLOR}"
 }
 
 # FIXME: colored prompt_segment issue: selecting (up/down arrow buttons) from history is breakingg prompt line with old artefacts
 prompt_segment() {
-  #echo -e "${PROMPT_COLOR}└ \e[0m"
+  #echo -e "${PROMPT_COLOR}└ ${NO_COLOR}"
   echo -e "└ "
 }
 
@@ -74,7 +75,7 @@ jobs_segment() {
   if [ $JOBS == "0" ]; then
     return
   fi
-  echo -e "${JOBS_COLOR} ${JOBS} \e[0m"
+  echo -e "${JOBS_COLOR} ${JOBS} ${NO_COLOR}"
 }
 
 ecode_segment() {
@@ -92,7 +93,7 @@ ecode_segment() {
     ECODE=$LAST_ECODE
   fi
 
-  echo -e "${ECODE_COLOR} ${ECODE} \e[0m 👾"
+  echo -e "${ECODE_COLOR} ${ECODE} ${NO_COLOR} 👾"
 }
 
 statusline_segments() {
