@@ -95,10 +95,10 @@ statusline_segments() {
 }
 
 statusline_ps1() {
-  # save the last exit code by the firtst command in here
+  # save the last exit code by the first command
   LAST_ECODE=$?
   PS1="$(statusline_segments)"
 }
 
-export PS1="$(statusline_segments)"
+export PS1="$(statusline_ps1)"
 export PROMPT_COMMAND='statusline_ps1;printf "\033]0;%s@%s:%s\007" "${USER/#$USER/g}" "${HOSTNAME/#$HOSTNAME/l}" "${PWD/#$HOME/\~}";history -a'
