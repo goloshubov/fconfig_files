@@ -19,10 +19,10 @@ git_segment() {
   BRANCH="$(git branch --show-current 2>/dev/null)"
   if [ ! -z "$BRANCH" ]; then
     if [ -z "$(git status -s)" ]; then
-      if [ "$( git status | grep -iE 'ahead|behind' )" != 1 ]; then
-        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} * \e[0m"
-      else
+      if [ -z "$( git status | grep -iE 'ahead|behind' )" ]; then
         echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} \e[0m"
+      else
+        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} * \e[0m"
       fi
     else
       echo -e "${BRANCH_DIRTY_COLOR} ⌥ ${BRANCH} \e[0m"
