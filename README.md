@@ -20,7 +20,7 @@ Here is expected repo directory structure
 ## some of configs
 - [.vimrc](group/all/home/.vimrc)
 - .bashrc.d/*
-  - [statusline](group/workstations/home/.bashrc.d/z99_statusline.sh) (powerline-like custom bash prompt)\
+  - [statusline](group/workstations/home/.bashrc.d/z99_statusline.sh) - my powerline-like custom bash prompt, simple, bash only\
     ![img](.images/statusline_git_0.png)\
     ![img](.images/statusline_git_1.png)\
     ![img](.images/statusline_git_2.png)\
