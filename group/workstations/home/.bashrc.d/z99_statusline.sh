@@ -1,3 +1,6 @@
+# multiline bash prompt
+
+# can toggled by 'toggle STATUSLINE_K8S_SHOW' command
 STATUSLINE_K8S_SHOW="${STATUSLINE_K8S_SHOW:-0}"
 
 # .bashrc.d/colors.sh
