@@ -1,7 +1,7 @@
 # dotfiles and configs
 (a repository for https://github.com/goloshubov/fconfig)
 
-Here is expected repo directory structure, all supported dirs (dconf, etc, home) are not mandatory:
+Here is expected repo directory structure
 
 ```
 .
