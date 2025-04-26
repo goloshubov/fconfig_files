@@ -17,7 +17,7 @@ Here is expected repo directory structure, all supported dirs (dconf, etc, home)
         └── home
 ```
 
-# some features
+## some features
 - .bashrc.d/*
   - statusline (powerline-like custom bash prompt)\
     ![screenshot0](https://github.com/goloshubov/fconfig_files/blob/main/.images/statusline_git_0.png)\
