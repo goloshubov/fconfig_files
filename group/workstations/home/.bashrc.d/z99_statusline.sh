@@ -90,7 +90,9 @@ ecode_segment() {
 }
 
 statusline_segments() {
+  #1st line - status
   echo "$(pwd_segment)$(git_segment)$(venv_segment)$(k8s_segment)$(jobs_segment)$(ecode_segment)"
+  #2nd line - prompt
   echo "$(prompt_segment)"
 }
 
