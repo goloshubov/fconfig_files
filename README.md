@@ -19,6 +19,8 @@ Here is expected repo directory structure
 
 ## some of configs
 - [.vimrc](group/all/home/.vimrc)
+- [.tmux.conf](group/all/home/.tmux.conf)
+- [.screenrc](group/all/home/.screenrc)
 - [powerline](group/workstations/home/.config/powerline) - for vim, tmux
 - .bashrc.d/*
   - [statusline](group/workstations/home/.bashrc.d/z99_statusline.sh) - my powerline-like custom bash prompt, simple, tor terminal\
