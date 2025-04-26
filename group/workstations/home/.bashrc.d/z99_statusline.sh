@@ -31,7 +31,7 @@ git_segment() {
         echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} * \e[0m"
       fi
     else
-      echo -e "${BRANCH_DIRTY_COLOR} ⌥ ${BRANCH} \e[0m"
+      echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} \e[0m"
     fi
   else
     echo ""
