@@ -1,5 +1,5 @@
 # dotfiles and configs
-a repository for [fconfig](https://github.com/goloshubov/fconfig)
+files repository for [fconfig](https://github.com/goloshubov/fconfig)
 
 Here is expected repo directory structure
 
