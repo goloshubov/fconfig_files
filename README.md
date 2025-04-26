@@ -22,6 +22,7 @@ Here is expected repo directory structure
 - [zed](group/workstations/home/.var/app/dev.zed.Zed/config/settings.json)
 - [.tmux.conf](group/all/home/.tmux.conf)
 - [.screenrc](group/all/home/.screenrc)
+- [xournal++](group/workstations/home/.var/app/com.github.xournalpp.xournalpp/config/xournalpp/toolbar.ini) - tablet optimized custom menu
 - [powerline](group/workstations/home/.config/powerline)
 - .bashrc.d/*
   - [statusline](group/workstations/home/.bashrc.d/z99_statusline.sh) - my powerline-like custom bash prompt, simple; instead of powerline's bash\
