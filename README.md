@@ -24,7 +24,8 @@ Here is expected repo directory structure
     ![screenshot1](.images/statusline_git_1.png)\
     ![screenshot2](.images/statusline_git_2.png)\
     ![screenshot3](.images/statusline_git_3.png)
-  - [fzf](group/workstations/home/.bashrc.d/fzf.sh) (advanced search tool)
+  - [fzf](group/workstations/home/.bashrc.d/fzf.sh) - advanced search tool, Ctrl-R replacement, quick file browser:\
+    ![screenshot3](.images/fzf_file_browser.png)
   - custom [colors](group/all/home/.bashrc.d/LESS_TERMCAP.sh) (man)\
     ![screenshot3](.images/man_colors.png)
 - etc ...
