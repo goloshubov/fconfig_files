@@ -25,6 +25,6 @@ Here is expected repo directory structure
     ![screenshot2](https://github.com/goloshubov/fconfig_files/blob/main/.images/statusline_git_2.png)\
     ![screenshot3](https://github.com/goloshubov/fconfig_files/blob/main/.images/statusline_git_3.png)
   - fzf (advanced search tool)
-  - custom icolors (man)\
+  - custom colors (man)\
     ![screenshot3](https://github.com/goloshubov/fconfig_files/blob/main/.images/man_colors.png)
 - etc ...
