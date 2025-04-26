@@ -19,6 +19,7 @@ Here is expected repo directory structure
 
 ## some of configs
 - [.vimrc](group/all/home/.vimrc)
+- [zed](group/workstations/home/.var/app/dev.zed.Zed/config/settings.json)
 - [.tmux.conf](group/all/home/.tmux.conf)
 - [.screenrc](group/all/home/.screenrc)
 - [powerline](group/workstations/home/.config/powerline)
