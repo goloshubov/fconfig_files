@@ -100,6 +100,10 @@ ecode_segment() {
   echo -e "${ECODE_COLOR} ${ECODE} ${NOCOLOR} 👾"
 }
 
+#inner_segment() {
+#  echo -e "$1├${NOCOLOR}"
+#}
+
 # FIXME: colored prompt_segment issue: selecting (up/down arrow buttons) from history is breakingg prompt line with old artefacts
 prompt_segment() {
   #echo -e "${PROMPT_COLOR}└ ${NOCOLOR}"
@@ -109,7 +113,11 @@ prompt_segment() {
 statusline_segments() {
   #1st line - status
   echo "$(first_segment)$(host_segment)$(pwd_segment)$(git_segment)$(venv_segment)$(k8s_segment)$(jobs_segment)$(ecode_segment)"
-  #2nd line - prompt
+
+  # N line
+  #echo "$(inner_segment $COLOR)"
+
+  #last line - prompt
   echo "$(prompt_segment)"
 }
 
