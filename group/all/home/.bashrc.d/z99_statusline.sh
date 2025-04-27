@@ -126,16 +126,13 @@ statusline_segments() {
 statusline_ps1() {
   # save the last exit code by the first command
   LAST_ECODE=$?
+
+  # preserve working directory for new terminal tab/window
+  printf "\033]7;file://%s%s\033\\" "${HOSTNAME}" "${PWD}"
+  # update title
+  printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME}" "${PWD/#$HOME/\~}"
+
   PS1="$(statusline_segments)"
 }
 
-export PS1="$(statusline_ps1)"
-
-PROMPT_COMMAND='statusline_ps1;printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME}" "${PWD/#$HOME/\~}";history -a;__vte_prompt_command'
-
-
-#{%  if 'workstations' in groups and ansible_hostname in groups['workstations'] %}
-#export PROMPT_COMMAND="${PROMPT_COMMAND};__vte_prompt_command"
-#{% else %}
-#export PROMPT_COMMAND="${PROMPT_COMMAND}"
-#{% endif %}
+PROMPT_COMMAND='statusline_ps1;history -a'
