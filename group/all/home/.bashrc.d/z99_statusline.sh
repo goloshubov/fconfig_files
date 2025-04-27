@@ -41,10 +41,10 @@ git_segment() {
       if [ -z "$( git status | grep -iE 'ahead|behind' )" ]; then
         echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} ${NO_COLOR}"
       else
-        echo -e "${BRANCH_HEAD_COLOR} ⌥  ${BRANCH} * ${NO_COLOR}"
+        echo -e "${BRANCH_HEAD_COLOR} ⌥  ${BRANCH} 🢳 ${NO_COLOR}"
       fi
     else
-      echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} ~ ${NO_COLOR}"
+      echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} * ${NO_COLOR}"
     fi
   else
     echo ""
