@@ -6,6 +6,8 @@
 STATUSLINE_K8S_SHOW="${STATUSLINE_K8S_SHOW:-0}"
 
 # ~/.bashrc.d/colors.sh
+FIRST_COLOR=$On_Blue
+HOST_COLOR=$On_Blue
 PWD_COLOR=$On_IBlue
 BRANCH_COLOR=$On_IBlack
 BRANCH_DIRTY_COLOR=$On_Yellow
@@ -18,8 +20,16 @@ NO_COLOR="\e[0m"
 
 LAST_ECODE="0"
 
+first_segment() {
+  echo -e "${FIRST_COLOR}┌ ${NO_COLOR}"
+}
+
+host_segment() {
+  echo -e "${HOST_COLOR} ${HOSTNAME} ${NO_COLOR}"
+}
+
 pwd_segment() {
-  echo -e "${PWD_COLOR}┌ ${PWD/#$HOME/\~} ${NO_COLOR}"
+  echo -e "${PWD_COLOR} ${PWD/#$HOME/\~} ${NO_COLOR}"
 }
 
 git_segment() {
@@ -98,7 +108,7 @@ ecode_segment() {
 
 statusline_segments() {
   #1st line - status
-  echo "$(pwd_segment)$(git_segment)$(venv_segment)$(k8s_segment)$(jobs_segment)$(ecode_segment)"
+  echo "$(first_segment)$(host_segment)$(pwd_segment)$(git_segment)$(venv_segment)$(k8s_segment)$(jobs_segment)$(ecode_segment)"
   #2nd line - prompt
   echo "$(prompt_segment)"
 }
