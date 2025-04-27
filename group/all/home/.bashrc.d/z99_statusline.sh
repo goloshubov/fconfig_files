@@ -18,20 +18,19 @@ K8S_NS_COLOR=$On_Blue
 JOBS_COLOR=$On_Red
 ECODE_COLOR=$On_IRed
 PROMPT_COLOR="$On_Blue"
-NO_COLOR="\033[0m"
 
 LAST_ECODE="0"
 
 first_segment() {
-  echo -e "${FIRST_COLOR}┌${NO_COLOR}"
+  echo -e "${FIRST_COLOR}┌${NOCOLOR}"
 }
 
 host_segment() {
-  echo -e "${HOST_COLOR} ${HOSTNAME} ${NO_COLOR}"
+  echo -e "${HOST_COLOR} ${HOSTNAME} ${NOCOLOR}"
 }
 
 pwd_segment() {
-  echo -e "${PWD_COLOR} ${PWD/#$HOME/\~} ${NO_COLOR}"
+  echo -e "${PWD_COLOR} ${PWD/#$HOME/\~} ${NOCOLOR}"
 }
 
 git_segment() {
@@ -39,12 +38,12 @@ git_segment() {
   if [ ! -z "$BRANCH" ]; then
     if [ -z "$(git status -s)" ]; then
       if [ -z "$( git status | grep -iE 'ahead|behind' )" ]; then
-        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} ${NO_COLOR}"
+        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} ${NOCOLOR}"
       else
-        echo -e "${BRANCH_HEAD_COLOR} ⌥  ${BRANCH} ^ ${NO_COLOR}"
+        echo -e "${BRANCH_HEAD_COLOR} ⌥  ${BRANCH} ^ ${NOCOLOR}"
       fi
     else
-      echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} * ${NO_COLOR}"
+      echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} * ${NOCOLOR}"
     fi
   else
     echo ""
@@ -62,7 +61,7 @@ k8s_segment() {
   fi
   ctx=$(grep 'current-context'  ~/.kube/config | awk '{ print $2 }')
   ns=$(kubectl config get-contexts $ctx --no-headers=true | awk '{ print $5 }')
-  echo -e "${K8S_CTX_COLOR} ☸ ${ctx}${K8S_NS_COLOR}:${ns} ${NO_COLOR}"
+  echo -e "${K8S_CTX_COLOR} ☸ ${ctx}${K8S_NS_COLOR}:${ns} ${NOCOLOR}"
 }
 
 venv_segment() {
@@ -72,7 +71,7 @@ venv_segment() {
   else 
     VENV=""
   fi
-  echo -e "${VENV_COLOR}${VENV}${NO_COLOR}"
+  echo -e "${VENV_COLOR}${VENV}${NOCOLOR}"
 }
 
 jobs_segment() {
@@ -80,7 +79,7 @@ jobs_segment() {
   if [ $JOBS == "0" ]; then
     return
   fi
-  echo -e "${JOBS_COLOR} ${JOBS} ${NO_COLOR}"
+  echo -e "${JOBS_COLOR} ${JOBS} ${NOCOLOR}"
 }
 
 ecode_segment() {
@@ -98,12 +97,12 @@ ecode_segment() {
     ECODE=$LAST_ECODE
   fi
 
-  echo -e "${ECODE_COLOR} ${ECODE} ${NO_COLOR} 👾"
+  echo -e "${ECODE_COLOR} ${ECODE} ${NOCOLOR} 👾"
 }
 
 # FIXME: colored prompt_segment issue: selecting (up/down arrow buttons) from history is breakingg prompt line with old artefacts
 prompt_segment() {
-  #echo -e "${PROMPT_COLOR}└ ${NO_COLOR}"
+  #echo -e "${PROMPT_COLOR}└ ${NOCOLOR}"
   echo -e "└ "
 }
 
