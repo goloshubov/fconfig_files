@@ -17,8 +17,8 @@ K8S_CTX_COLOR=$On_Blue
 K8S_NS_COLOR=$On_Blue
 JOBS_COLOR=$On_Red
 ECODE_COLOR=$On_IRed
-#PROMPT_COLOR=""
-NO_COLOR="\e[0m"
+PROMPT_COLOR="$On_Blue"
+NO_COLOR="\033[0m"
 
 LAST_ECODE="0"
 
@@ -75,12 +75,6 @@ venv_segment() {
   echo -e "${VENV_COLOR}${VENV}${NO_COLOR}"
 }
 
-# FIXME: colored prompt_segment issue: selecting (up/down arrow buttons) from history is breakingg prompt line with old artefacts
-prompt_segment() {
-  #echo -e "${PROMPT_COLOR}└ ${NO_COLOR}"
-  echo -e "└ "
-}
-
 jobs_segment() {
   JOBS="$( jobs | wc -l )"
   if [ $JOBS == "0" ]; then
@@ -105,6 +99,12 @@ ecode_segment() {
   fi
 
   echo -e "${ECODE_COLOR} ${ECODE} ${NO_COLOR} 👾"
+}
+
+# FIXME: colored prompt_segment issue: selecting (up/down arrow buttons) from history is breakingg prompt line with old artefacts
+prompt_segment() {
+  #echo -e "${PROMPT_COLOR}└ ${NO_COLOR}"
+  echo -e "└ "
 }
 
 statusline_segments() {
