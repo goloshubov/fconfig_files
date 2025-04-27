@@ -35,42 +35,43 @@ pwd_segment() {
 
 git_segment() {
   BRANCH="$(git branch --show-current 2>/dev/null)"
-  if [ ! -z "$BRANCH" ]; then
-    if [ -z "$(git status -s)" ]; then
-      if [ -z "$( git status | grep -iE 'ahead|behind' )" ]; then
-        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} ${NOCOLOR}"
-      else
-        echo -e "${BRANCH_HEAD_COLOR} ⌥  ${BRANCH} ^ ${NOCOLOR}"
-      fi
+  if [ -z "$BRANCH" ]; then
+    return
+  fi
+
+  if [ -z "$(git status -s)" ]; then
+    if [ -z "$( git status | grep -iE 'ahead|behind' )" ]; then
+      echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} ${NOCOLOR}"
     else
-      echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} * ${NOCOLOR}"
+      echo -e "${BRANCH_HEAD_COLOR} ⌥  ${BRANCH} ^ ${NOCOLOR}"
     fi
   else
-    echo ""
+    echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} * ${NOCOLOR}"
   fi
 }
 
 k8s_segment() {
   if [ "$STATUSLINE_K8S_SHOW" == "0" ]; then
-    echo ""
     return
   fi
   if [ ! -f ~/.kube/config ]; then
-    echo ""
     return
   fi
+
   ctx=$(grep 'current-context'  ~/.kube/config | awk '{ print $2 }')
   ns=$(kubectl config get-contexts $ctx --no-headers=true | awk '{ print $5 }')
+
   echo -e "${K8S_CTX_COLOR} ☸ ${ctx}${K8S_NS_COLOR}:${ns} ${NOCOLOR}"
 }
 
 venv_segment() {
-  if [ ! -z "$VIRTUAL_ENV" ]; then 
-    VENV_name="$(basename $VIRTUAL_ENV)"
-    VENV=" (e) $VENV_name "
-  else 
-    VENV=""
+  if [ -z "$VIRTUAL_ENV" ]; then 
+    return
   fi
+
+  VENV_name="$(basename $VIRTUAL_ENV)"
+  VENV=" (e) $VENV_name "
+
   echo -e "${VENV_COLOR}${VENV}${NOCOLOR}"
 }
 
@@ -79,6 +80,7 @@ jobs_segment() {
   if [ $JOBS == "0" ]; then
     return
   fi
+
   echo -e "${JOBS_COLOR} ${JOBS} ${NOCOLOR}"
 }
 
