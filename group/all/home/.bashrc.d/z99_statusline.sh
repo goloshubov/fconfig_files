@@ -10,6 +10,7 @@ FIRST_COLOR=$On_Blue
 HOST_COLOR=$On_Blue
 PWD_COLOR=$On_IBlue
 BRANCH_COLOR=$On_IBlack
+BRANCH_HEAD_COLOR=$On_IBlack
 BRANCH_DIRTY_COLOR=$On_Yellow
 VENV_COLOR=$On_Green
 K8S_CTX_COLOR=$On_Blue
@@ -40,7 +41,7 @@ git_segment() {
       if [ -z "$( git status | grep -iE 'ahead|behind' )" ]; then
         echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} ${NO_COLOR}"
       else
-        echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} * ${NO_COLOR}"
+        echo -e "${BRANCH_HEAD_COLOR} ⌥  ${BRANCH} * ${NO_COLOR}"
       fi
     else
       echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} ${NO_COLOR}"
