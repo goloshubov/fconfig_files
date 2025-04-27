@@ -127,7 +127,7 @@ statusline_ps1() {
   # save the last exit code by the first command
   LAST_ECODE=$?
 
-  # preserve working directory for new terminal tab/window
+  # working directory for the next session
   printf "\033]7;file://%s%s\033\\" "${HOSTNAME}" "${PWD}"
   # update title
   printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME}" "${PWD/#$HOME/\~}"
