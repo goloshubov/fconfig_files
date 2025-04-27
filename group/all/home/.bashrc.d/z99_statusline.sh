@@ -12,7 +12,8 @@ PWD_COLOR=$On_IBlue
 BRANCH_COLOR=$On_IBlack
 BRANCH_DIRTY_COLOR=$On_Yellow
 VENV_COLOR=$On_Green
-K8S_COLOR=$On_Blue
+K8S_CTX_COLOR=$On_Blue
+K8S_NS_COLOR=$On_Blue
 JOBS_COLOR=$On_Red
 ECODE_COLOR=$On_IRed
 #PROMPT_COLOR=""
@@ -60,8 +61,7 @@ k8s_segment() {
   fi
   ctx=$(grep 'current-context'  ~/.kube/config | awk '{ print $2 }')
   ns=$(kubectl config get-contexts $ctx --no-headers=true | awk '{ print $5 }')
-  K8S=" ☸  ${ctx}:${ns} "
-  echo -e "${K8S_COLOR}${K8S}${NO_COLOR}"
+  echo -e "${K8S_CTX_COLOR} ☸  ${ctx}${K8S_NS_COLOR}:${ns} ${NO_COLOR}"
 }
 
 venv_segment() {
