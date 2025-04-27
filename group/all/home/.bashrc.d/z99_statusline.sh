@@ -21,7 +21,7 @@ NO_COLOR="\e[0m"
 LAST_ECODE="0"
 
 first_segment() {
-  echo -e "${FIRST_COLOR}┌ ${NO_COLOR}"
+  echo -e "${FIRST_COLOR}┌${NO_COLOR}"
 }
 
 host_segment() {
