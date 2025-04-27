@@ -120,4 +120,4 @@ statusline_ps1() {
 }
 
 export PS1="$(statusline_ps1)"
-export PROMPT_COMMAND='statusline_ps1;printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME}" "${PWD/#$HOME/\~}";history -a'
+export PROMPT_COMMAND='statusline_ps1;printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME}" "${PWD/#$HOME/\~}";history -a;__vte_prompt_command'
