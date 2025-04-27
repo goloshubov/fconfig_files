@@ -61,7 +61,7 @@ k8s_segment() {
   fi
   ctx=$(grep 'current-context'  ~/.kube/config | awk '{ print $2 }')
   ns=$(kubectl config get-contexts $ctx --no-headers=true | awk '{ print $5 }')
-  echo -e "${K8S_CTX_COLOR} ☸  ${ctx}${K8S_NS_COLOR}:${ns} ${NO_COLOR}"
+  echo -e "${K8S_CTX_COLOR} ☸ ${ctx}${K8S_NS_COLOR}:${ns} ${NO_COLOR}"
 }
 
 venv_segment() {
