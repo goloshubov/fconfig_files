@@ -128,7 +128,7 @@ statusline_ps1() {
   LAST_ECODE=$?
 
   # working directory for the next session
-  printf "\033]7;file://%s%s\033\\" "${HOSTNAME}" "${PWD}"
+  printf "\033]7;file://%s\033\\" "${PWD}"
   # update title
   printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME}" "${PWD/#$HOME/\~}"
 
