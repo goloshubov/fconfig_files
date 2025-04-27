@@ -2,7 +2,7 @@
 
 # can be toggled by 'toggle STATUSLINE_K8S_SHOW' command
 # ~/.bashrc.d/function_toggle.sh
-# ~/.bashrc.d/00_toggle_envs.workstations.sh
+# ~/.bashrc.d/00_toggle_envs.sh
 STATUSLINE_K8S_SHOW="${STATUSLINE_K8S_SHOW:-0}"
 
 # ~/.bashrc.d/colors.sh
