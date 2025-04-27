@@ -25,7 +25,7 @@ Here is expected repo directory structure
 - [xournal++](group/workstations/home/.var/app/com.github.xournalpp.xournalpp/config/xournalpp/toolbar.ini) - tablet optimized custom menu
 - [powerline](group/workstations/home/.config/powerline)
 - .bashrc.d/*
-  - [statusline](group/all/home/.bashrc.d/z99_statusline.sh.j2) - my powerline-like custom bash prompt, simple; instead of powerline's bash\
+  - [statusline](group/all/home/.bashrc.d/z99_statusline.sh) - my powerline-like custom bash prompt, simple; instead of powerline's bash\
     ![img](.images/statusline_git_0.png)\
     ![img](.images/statusline_git_1.png)\
     ![img](.images/statusline_git_2.png)\
