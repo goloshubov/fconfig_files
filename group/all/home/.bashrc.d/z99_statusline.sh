@@ -1,10 +1,5 @@
 # multiline bash prompt
 
-# K8s segment can be toggled by the 'toggle STATUSLINE_K8S_SHOW' command
-# ~/.bashrc.d/function_toggle.sh
-# ~/.bashrc.d/00_toggle_envs.sh
-STATUSLINE_K8S_SHOW="${STATUSLINE_K8S_SHOW:-0}"
-
 # ~/.bashrc.d/colors.sh
 FIRST_COLOR=$On_Blue
 HOST_COLOR=$On_Blue
@@ -58,8 +53,8 @@ k8s_segment() {
     return
   fi
 
-  ctx=$(grep 'current-context'  ~/.kube/config | awk '{ print $2 }')
-  ns=$(kubectl config get-contexts $ctx --no-headers=true | awk '{ print $5 }')
+  ctx=$(grep 'current-context' ~/.kube/config 2>/dev/null | awk '{ print $2 }' 2>/dev/null)
+  ns=$(kubectl config get-contexts $ctx --no-headers=true 2>/dev/null | awk '{ print $5 }' 2>/dev/null)
 
   echo -e "${K8S_CTX_COLOR} ☸ ${ctx}${K8S_NS_COLOR}:${ns} ${NOCOLOR}"
 }
