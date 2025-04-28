@@ -13,7 +13,7 @@ toggle() {
   fi
 
   # save to local vars
-  if [ -z "$(grep $env $LOCAL_VARS)" ]; then 
+  if [ -z "$(grep $env $LOCAL_VARS 2>/dev/null)" ]; then 
     echo "${env}=${new_value}" > $LOCAL_VARS
   else
     sed -i "s/^${env}=.*$/${env}=${new_value}/" $LOCAL_VARS 2>/dev/null
