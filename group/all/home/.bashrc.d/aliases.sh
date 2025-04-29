@@ -22,4 +22,5 @@ alias fconfig_local="$FCONFIG_PULL && $FCONFIG_LOCAL"
 export PHOSPHOR_PATH=/etc/os-release
 alias phosphor='while true; do for filename in $(find $PHOSPHOR_PATH -type f,l); do echo filename: $filename; array=$(cat $filename); for (( i=0; i<${#array}; i++ )); do echo -ne "${array:$i:1}"; sleep 0.01; done; done; done'
 
-alias cat='bat -pp'   #bat --plain --paging=never'
+#bat --plain --paging=never'
+alias cat='bat -pp'
