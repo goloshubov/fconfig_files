@@ -28,7 +28,6 @@ Here is expected repo directory structure
 - [bat](group/all/home/.config/bat/config) - cat alternative
 - [.tmux.conf](group/all/home/.tmux.conf)
 - [.screenrc](group/all/home/.screenrc)
-- [xournal++](group/workstations/home/.var/app/com.github.xournalpp.xournalpp/config/xournalpp/toolbar.ini) - tablet optimized custom menu
 - [powerline](group/workstations/home/.config/powerline)
 - [statusline](group/all/home/.bashrc.d/z10_statusline.sh) - my powerline-like custom bash prompt, simple; instead of powerline's bash\
   ![img](.images/statusline_git_0.png)\
@@ -37,3 +36,4 @@ Here is expected repo directory structure
   ![img](.images/statusline_git_3.png)
 - custom [colors](group/all/home/.bashrc.d/LESS_TERMCAP.sh) (man)\
   ![img](.images/man_colors.png)
+- [xournal++](group/workstations/home/.var/app/com.github.xournalpp.xournalpp/config/xournalpp/toolbar.ini) - tablet optimized custom menu
