@@ -6,4 +6,4 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 source /usr/share/fzf/shell/key-bindings.bash
 
-alias vim_p='vim $(fzf --preview "bat --color=always {}")'
+alias vimf='vim $(fzf --preview "bat --color=always {}")'
