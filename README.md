@@ -17,6 +17,7 @@ Here is expected repo directory structure
 ## features
 - fconfig: group and host specific configs support
 - fconfig: jinja2 templating support - all *.j2 files
+- fconfig: GNOME settings from dconf dump files
 - .bashrc.d/*.sh approach, ascending alphabetical precedence, from 0 to Z
 
 ## some of configs
