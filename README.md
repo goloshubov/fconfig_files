@@ -21,7 +21,8 @@ Here is expected repo directory structure
 - .bashrc.d/*.sh approach, ascending alphabetical precedence, from 0 to Z
 
 ## some of configs
-- [.vimrc](group/all/home/.vimrc)
+- [.vimrc](group/all/home/.vimrc) - first editor
+- [zed](group/workstations/home/.var/app/dev.zed.Zed/config/settings.json) - second editor
 - [fzf](group/workstations/home/.bashrc.d/fzf.sh) - advanced search tool, Ctrl-R replacement, quick file browser (for terminal, vim):\
   <img src=".images/fzf_file_browser.png" width="50%" height="50%">
 - [bat](group/all/home/.config/bat/config) - cat alternative
@@ -35,3 +36,4 @@ Here is expected repo directory structure
   ![img](.images/statusline_git_3.png)
 - custom [colors](group/all/home/.bashrc.d/LESS_TERMCAP.sh) (man)\
   ![img](.images/man_colors.png)
+- [xournal++](group/workstations/home/.var/app/com.github.xournalpp.xournalpp/config/xournalpp/toolbar.ini) - tablet optimized custom menu
