@@ -61,6 +61,5 @@
     "j:red":                   { "fg": "solarized:red",   "bg": "gray1", "attrs": [] },
     "j:blue":                  { "fg": "darkblue",   "bg": "gray4", "attrs": [] },
     "j:green":                 { "fg": "solarized:green", "bg": "gray1", "attrs": [] }
-
   }
 }
