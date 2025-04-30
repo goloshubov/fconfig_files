@@ -23,7 +23,7 @@ Here is expected repo directory structure
 ## some of configs
 - [.vimrc](group/all/home/.vimrc) - main editor
 - [Zed](group/workstations/home/.var/app/dev.zed.Zed/config/zed/settings.json) - second editor
-- [fzf](group/workstations/home/.bashrc.d/fzf.sh) - advanced search tool, Ctrl-R replacement, quick file browser for vim and terminal:\
+- [fzf](group/workstations/home/.bashrc.d/fzf.sh) - advanced search tool, Ctrl-R replacement, quick file browser for vim (like in helix) and for terminal:\
   <img src=".images/fzf_file_browser.png" width="50%" height="50%">
 - [bat](group/all/home/.config/bat/config) - cat alternative
 - [.tmux.conf](group/all/home/.tmux.conf)
