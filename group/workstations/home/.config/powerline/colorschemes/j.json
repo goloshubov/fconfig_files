@@ -58,8 +58,8 @@
     "k8s_namespace":              { "fg": "solarized:red",  "bg": "gray1", "attrs": [] },
     "k8s_context":                { "fg": "darkcyan", "bg": "gray1", "attrs": [] },
     "k8s:divider":                { "fg": "gray4",          "bg": "gray1", "attrs": [] },
-    "j:red":                   { "fg": "solarized:red",   "bg": "gray1", "attrs": [] },
-    "j:blue":                  { "fg": "darkblue",   "bg": "gray4", "attrs": [] },
-    "j:green":                 { "fg": "solarized:green", "bg": "gray1", "attrs": [] }
+    "j:red":                      { "fg": "solarized:red",   "bg": "gray1", "attrs": [] },
+    "j:blue":                     { "fg": "darkblue",   "bg": "gray4", "attrs": [] },
+    "j:green":                    { "fg": "solarized:green", "bg": "gray1", "attrs": [] }
   }
 }
