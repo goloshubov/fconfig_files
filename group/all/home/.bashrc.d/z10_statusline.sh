@@ -1,9 +1,9 @@
 # multiline bash prompt
 
-# ~/.bashrc.d/colors.sh
+# ~/.bashrc.d/10_colors.sh
 FIRST_COLOR=$On_Blue
 HOST_COLOR=$On_Blue
-ICON_COLOR=$On_IBlue
+ICON_COLOR=$On_Purple
 PWD_COLOR=$On_IBlue
 BRANCH_COLOR=$On_IBlack
 BRANCH_HEAD_COLOR=$On_IBlack
