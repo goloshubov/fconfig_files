@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# activate python venv for ansible-lint (e.g. pre-commit issue)
-# in case alias don't work non interative shell (scripts, processes)
+# activate python venv for ansible-lint
+# solves non interative shell issues (e.g. pre-commit, Zed editor)
 
 venv() {
   if [ "$VIRTUAL_ENV" != "$1" ]; then 
