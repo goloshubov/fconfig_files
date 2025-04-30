@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# activate python venv for ansible-lint (e.g. pre-commit issue)
+# in case alias don't work non interative shell (scripts, processes)
+
+venv() {
+  if [ "$VIRTUAL_ENV" != "$1" ]; then 
+    source ~/python-venv/$1/bin/activate
+  fi
+}
+
+venv ansible
+ansible-lint $@
