@@ -9,6 +9,7 @@
   editor = vim
 
 [merge]
-	conflictstyle = diff3
+  conflictstyle = diff3
+
 [pull]
-	rebase = false
+  rebase = true
