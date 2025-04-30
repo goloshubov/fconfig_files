@@ -29,7 +29,7 @@ Here is expected repo directory structure
 - [.tmux.conf](group/all/home/.tmux.conf)
 - [.screenrc](group/all/home/.screenrc)
 - [powerline](group/workstations/home/.config/powerline)
-- [statusline](group/all/home/.bashrc.d/z10_statusline.sh) - my powerline-like custom bash prompt, simple; powerline's bash alternative\
+- [statusline](group/all/home/.bashrc.d/z10_statusline.sh) - homebrew powerline-like bash prompt, simple; powerline's bash alternative\
   ![img](.images/statusline_git_0.png)\
   ![img](.images/statusline_git_1.png)\
   ![img](.images/statusline_git_2.png)\
