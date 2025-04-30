@@ -3,6 +3,7 @@
 # ~/.bashrc.d/colors.sh
 FIRST_COLOR=$On_Blue
 HOST_COLOR=$On_Blue
+ICON_COLOR=$On_IBlue
 PWD_COLOR=$On_IBlue
 BRANCH_COLOR=$On_IBlack
 BRANCH_HEAD_COLOR=$On_IBlack
@@ -22,6 +23,16 @@ first_segment() {
 
 host_segment() {
   echo -e "${HOST_COLOR} ${HOSTNAME} ${NOCOLOR}"
+}
+
+icon_segment() {
+  variant="$(grep VARIANT_ID /etc/os-release | awk -F= '{ print $2 }')"
+  if [ $variant == 'workstation' ]; then
+     #echo -e "${ICON_COLOR} 💻 ${NOCOLOR}"
+     return
+  elif [ $variant == 'server' ]; then
+     echo -e "${ICON_COLOR} 🖧  ${NOCOLOR}"
+  fi
 }
 
 pwd_segment() {
@@ -109,7 +120,7 @@ prompt_segment() {
 
 statusline_segments() {
   #1st line - status
-  echo "$(first_segment)$(host_segment)$(pwd_segment)$(git_segment)$(venv_segment)$(k8s_segment)$(jobs_segment)$(ecode_segment)"
+  echo "$(first_segment)$(icon_segment)$(host_segment)$(pwd_segment)$(git_segment)$(venv_segment)$(k8s_segment)$(jobs_segment)$(ecode_segment)"
 
   # N line
   #echo "$(inner_segment $COLOR)"
