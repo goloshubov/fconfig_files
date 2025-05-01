@@ -17,5 +17,11 @@
 
   "format_on_save": "off",
 
+  "languages": {
+    "JavaScript": {
+      "tab_size": 4
+    }
+  },
+
   "soft_wrap": "editor_width"
 }
