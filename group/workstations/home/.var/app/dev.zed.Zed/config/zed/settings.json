@@ -1,33 +1,21 @@
-// Zed settings
-// documentation: https://zed.dev/docs/configuring-zed
 {
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false
-    },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
 
-    //"buffer_font_family": "Zed Plex Mono",
-    "buffer_font_family": "Adwaita Mono",
+  "buffer_font_family": "Adwaita Mono",
 
-    "vim_mode": true,
-    "ui_font_size": 14,
-    "buffer_font_size": 13,
-    "theme": {
-        "mode": "system",
-        "light": "One Light",
-        "dark": "One Dark"
-    },
+  "vim_mode": true,
+  "ui_font_size": 14,
+  "buffer_font_size": 13,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
 
-    "format_on_save": "off",
+  "format_on_save": "off",
 
-    "tab_size": 4,
-    //"preferred_line_length": 120,
-    //"soft_wrap": "bounded",
-    "soft_wrap": "editor_width",
-
-    "languages": {
-        "JavaScript": {
-            "tab_size": 4
-        }
-    }
+  "soft_wrap": "editor_width"
 }
