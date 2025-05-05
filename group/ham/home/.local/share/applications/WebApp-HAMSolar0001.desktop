@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Name=Solar-Terrestrial Data
+Comment=Web App
+Exec=sh -c 'XAPP_FORCE_GTKWINDOW_ICON="weather-clear" firefox --class WebApp-HAMSolar0001 --name WebApp-HAMSolar0001 --profile /home/goloshubov/.local/share/ice/firefox/HAMSolar0001 --no-remote "https://www.hamqsl.com/solar101pic.php"'
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=weather-clear
+Categories=GTK;WebApps;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-HAMSolar001
+StartupNotify=true
+X-WebApp-Browser=Firefox
+X-WebApp-URL=https://www.hamqsl.com/solar101pic.php
+X-WebApp-CustomParameters=
+X-WebApp-Navbar=false
+X-WebApp-PrivateWindow=false
+X-WebApp-Isolated=true
+Keywords=Radio;HAM;
