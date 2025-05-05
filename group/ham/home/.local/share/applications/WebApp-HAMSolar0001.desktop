@@ -2,7 +2,7 @@
 Version=1.0
 Name=Solar-Terrestrial Data
 Comment=Web App
-Exec=sh -c 'XAPP_FORCE_GTKWINDOW_ICON="weather-clear" firefox --class WebApp-HAMSolar0001 --name WebApp-HAMSolar0001 --profile /home/goloshubov/.local/share/ice/firefox/HAMSolar0001 --no-remote "https://www.hamqsl.com/solar101pic.php"'
+Exec=sh -c 'XAPP_FORCE_GTKWINDOW_ICON="weather-clear" firefox --class WebApp-HAMSolar0001 --name WebApp-HAMSolar0001 --profile ~/.local/share/ice/firefox/HAMSolar0001 --no-remote "https://www.hamqsl.com/solar101pic.php"'
 Terminal=false
 X-MultipleArgs=false
 Type=Application
