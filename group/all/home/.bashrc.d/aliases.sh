@@ -15,7 +15,9 @@ alias grep_teal='GREP_COLORS="ms=01;36" grep --color=always'
 alias grep_lgrey='GREP_COLORS="ms=01;37" grep --color=always'
 
 FCONFIG_PULL='git -C ~/git/github/fconfig/ pull'
+FCONFIG='ansible-playbook -i ~/git/github/fconfig/inventories/ ~/git/github/fconfig/all.yml --limit $(hostname)'
 FCONFIG_LOCAL='ansible-playbook -i ~/git/github/fconfig/inventories/ ~/git/github/fconfig/all.yml -e ansible_connection=local --limit $(hostname)'
+alias fconfig="$FCONFIG_PULL && $FCONFIG"
 alias fconfig_local="$FCONFIG_PULL && $FCONFIG_LOCAL"
 
 # JFF. xscreensaver phosphor like output (for cool-retro-term)
