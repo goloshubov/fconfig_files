@@ -13,13 +13,13 @@ map <F3> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=a"<CR>
 map <F4> :set number! <CR>
 map <F5> :set nohlsearch! <CR>
 set et ts=2 ai sw=2 nu
-"set et ts=2 ai sw=2 
+"set et ts=2 ai sw=2
 
 set laststatus=2 " Always display the statusline in all windows
 "set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
-" Change directory to the current buffer when opening files. 
+" Change directory to the current buffer when opening files.
 "set autochdir
 
 
