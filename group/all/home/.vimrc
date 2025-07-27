@@ -29,6 +29,10 @@ python3 powerline_setup()
 python3 del powerline_setup
 
 
+" ---- jedi-vim -----
+let g:jedi#environment_path = "/home/goloshubov/python-venv/ansible/bin/python3.13"
+
+
 " ---- vim-ansible plugin ----
 let g:ansible_unindent_after_newline = 1
 "let g:ansible_attribute_highlight = "ob"
