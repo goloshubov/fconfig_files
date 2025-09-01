@@ -2,7 +2,7 @@
 Version=1.0
 Name=Coridor Camera
 Comment=Web App
-Exec=sh -c 'XAPP_FORCE_GTKWINDOW_ICON="camera-web" firefox --class WebApp-CoridorCamera0001 --name WebApp-CoridorCamera0001 --profile ~/.local/share/ice/firefox/CoridorCamera0001 --no-remote "http://192.168.35.1:8081/1/stream"'
+Exec=sh -c 'XAPP_FORCE_GTKWINDOW_ICON="camera-web" firefox --class WebApp-CoridorCamera0001 --name WebApp-CoridorCamera0001 --profile ~/.local/share/ice/firefox/CoridorCamera0001 --no-remote "http://192.168.35.2:8081/1/stream"'
 Terminal=false
 X-MultipleArgs=false
 Type=Application
