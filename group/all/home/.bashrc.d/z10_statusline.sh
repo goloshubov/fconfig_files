@@ -69,7 +69,6 @@ k8s_segment() {
     return
   fi
 
-
   ctx=$(grep 'current-context' "$KUBECONFIG" 2>/dev/null | awk '{ print $2 }' 2>/dev/null)
   ns=$(kubectl config get-contexts $ctx --no-headers=true 2>/dev/null | awk '{ print $5 }' 2>/dev/null)
 
