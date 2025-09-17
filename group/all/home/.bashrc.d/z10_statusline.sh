@@ -10,6 +10,8 @@ BRANCH_HEAD_COLOR=$On_IBlack
 BRANCH_DIRTY_COLOR=$On_Yellow
 VENV_COLOR=$On_Green
 K8S_CTX_COLOR=$On_Blue
+K8S_CTX_COLOR_HL=$On_Purple
+K8S_CTX_COLOR_HL_EGREP='prod|public'
 K8S_NS_COLOR=$On_Blue
 JOBS_COLOR=$On_Red
 ECODE_COLOR=$On_IRed
@@ -60,14 +62,25 @@ k8s_segment() {
   if [ "$STATUSLINE_K8S_SHOW" == "0" ]; then
     return
   fi
-  if [ ! -f ~/.kube/config ]; then
+  if [ -z "$KUBECONFIG" ]; then
+    KUBECONFIG="${HOME}/.kube/config"
+  fi
+  if [ ! -f "$KUBECONFIG" ]; then
     return
   fi
 
-  ctx=$(grep 'current-context' ~/.kube/config 2>/dev/null | awk '{ print $2 }' 2>/dev/null)
+
+  ctx=$(grep 'current-context' "$KUBECONFIG" 2>/dev/null | awk '{ print $2 }' 2>/dev/null)
   ns=$(kubectl config get-contexts $ctx --no-headers=true 2>/dev/null | awk '{ print $5 }' 2>/dev/null)
 
-  echo -e "${K8S_CTX_COLOR} ☸ ${ctx}${K8S_NS_COLOR}:${ns} ${NOCOLOR}"
+  # highlight cluster only if config filename or it's content has _EGREP string, e.g. prod
+  if [ -z "$( echo $KUBECONFIG | grep -E $K8S_CTX_COLOR_HL_EGREP )" ] && \
+     [ -z "$( grep -E $K8S_CTX_COLOR_HL_EGREP $KUBECONFIG )" ]; then
+      # not found, clearing color
+      K8S_CTX_COLOR_HL=$K8S_CTX_COLOR
+  fi
+
+  echo -e "${K8S_CTX_COLOR_HL} ☸ ${K8S_CTX_COLOR}${ctx}${K8S_NS_COLOR}:${ns} ${NOCOLOR}"
 }
 
 venv_segment() {
