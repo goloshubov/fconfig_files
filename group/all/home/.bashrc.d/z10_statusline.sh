@@ -58,6 +58,7 @@ git_segment() {
   fi
 }
 
+# supports both 1) multi-cluster config, and 2) multiple configs (via KUBECONFIG env var)
 k8s_segment() {
   if [ "$STATUSLINE_K8S_SHOW" == "0" ]; then
     return
