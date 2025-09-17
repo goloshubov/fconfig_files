@@ -72,9 +72,9 @@ k8s_segment() {
   ctx=$(grep 'current-context' "$KUBECONFIG" 2>/dev/null | awk '{ print $2 }' 2>/dev/null)
   ns=$(kubectl config get-contexts $ctx --no-headers=true 2>/dev/null | awk '{ print $5 }' 2>/dev/null)
 
-  # highlight cluster only if config filename or it's content has _EGREP string, e.g. prod
+  # highlight cluster only if config filename or current-context has _EGREP string, e.g. prod
   if [ -z "$( echo $KUBECONFIG | grep -E $K8S_CTX_COLOR_HL_EGREP )" ] && \
-     [ -z "$( grep -E $K8S_CTX_COLOR_HL_EGREP $KUBECONFIG )" ]; then
+     [ -z "$( echo $ctx | grep -E $K8S_CTX_COLOR_HL_EGREP )" ]; then
       # not found, clearing color
       K8S_CTX_COLOR_HL=$K8S_CTX_COLOR
   fi
