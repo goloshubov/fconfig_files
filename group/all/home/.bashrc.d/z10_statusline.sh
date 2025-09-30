@@ -28,11 +28,13 @@ host_segment() {
 }
 
 icon_segment() {
+  # works on fedora linux
+  # TODO: add other distrs support
   variant="$(grep VARIANT_ID /etc/os-release | awk -F= '{ print $2 }')"
-  if [ $variant == 'workstation' ]; then
+  if [[ $variant == 'workstation' ]]; then
      #echo -e "${ICON_COLOR} 💻 ${NOCOLOR}"
      return
-  elif [ $variant == 'server' ]; then
+  elif [[ $variant == 'server' ]]; then
      echo -e "${ICON_COLOR} 🖧  ${NOCOLOR}"
   fi
 }
@@ -42,31 +44,30 @@ pwd_segment() {
 }
 
 git_segment() {
-  BRANCH="$(git branch --show-current 2>/dev/null)"
-  if [ -z "$BRANCH" ]; then
+  BRANCH="$( git branch --show-current 2>/dev/null )"
+  if [[ -z "$BRANCH" ]]; then
     return
   fi
 
-  if [ -z "$(git status -s)" ]; then
-    if [ -z "$( git status | grep -iE 'ahead|behind' )" ]; then
-      echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} ${NOCOLOR}"
-    else
-      echo -e "${BRANCH_HEAD_COLOR} ⌥  ${BRANCH} ^ ${NOCOLOR}"
-    fi
-  else
+  if [[ -n "$( git status -s )" ]]; then
     echo -e "${BRANCH_DIRTY_COLOR} ⌥  ${BRANCH} * ${NOCOLOR}"
+  else
+    if [[ -n "$( git status | grep -iE 'ahead|behind' )" ]]; then
+      echo -e "${BRANCH_HEAD_COLOR} ⌥  ${BRANCH} ^ ${NOCOLOR}"
+    else
+      echo -e "${BRANCH_COLOR} ⌥  ${BRANCH} ${NOCOLOR}"
+    fi
   fi
 }
 
-# supports both 1) multi-cluster config, and 2) multiple configs (via KUBECONFIG env var)
 k8s_segment() {
-  if [ "$STATUSLINE_K8S_SHOW" == "0" ]; then
+  if [[ "$STATUSLINE_K8S_SHOW" == "0" ]]; then
     return
   fi
-  if [ -z "$KUBECONFIG" ]; then
+  if [[ -z "$KUBECONFIG" ]]; then
     KUBECONFIG="${HOME}/.kube/config"
   fi
-  if [ ! -f "$KUBECONFIG" ]; then
+  if [[ ! -f "$KUBECONFIG" ]]; then
     return
   fi
 
@@ -74,50 +75,44 @@ k8s_segment() {
   ns=$(kubectl config get-contexts $ctx --no-headers=true 2>/dev/null | awk '{ print $5 }' 2>/dev/null)
 
   # highlight cluster only if config filename or current-context has _EGREP string, e.g. prod
-  if [ -z "$( echo $KUBECONFIG | grep -E $K8S_CTX_COLOR_HL_EGREP )" ] && \
-     [ -z "$( echo $ctx | grep -E $K8S_CTX_COLOR_HL_EGREP )" ]; then
-      # not found, clearing color
+  if [[ -z "$( echo $KUBECONFIG | grep -E $K8S_CTX_COLOR_HL_EGREP )" ]] && \
+     [[ -z "$( echo $ctx | grep -E $K8S_CTX_COLOR_HL_EGREP )" ]]; then
+      # not found, no highlight color
       K8S_CTX_COLOR_HL=$K8S_CTX_COLOR
   fi
-
   echo -e "${K8S_CTX_COLOR_HL} ☸ ${K8S_CTX_COLOR}${ctx}${K8S_NS_COLOR}:${ns} ${NOCOLOR}"
 }
 
 venv_segment() {
-  if [ -z "$VIRTUAL_ENV" ]; then 
+  if [[ -z "$VIRTUAL_ENV" ]]; then
     return
   fi
-
-  VENV_name="$(basename $VIRTUAL_ENV)"
-  VENV=" (e) $VENV_name "
-
-  echo -e "${VENV_COLOR}${VENV}${NOCOLOR}"
+  VENV="$(basename $VIRTUAL_ENV)"
+  echo -e "${VENV_COLOR} (e) ${VENV} ${NOCOLOR}"
 }
 
 jobs_segment() {
   JOBS="$( jobs | wc -l )"
-  if [ $JOBS == "0" ]; then
+  if [[ $JOBS == "0" ]]; then
     return
   fi
-
   echo -e "${JOBS_COLOR} ${JOBS} ${NOCOLOR}"
 }
 
 ecode_segment() {
-  if [ $LAST_ECODE == "0" ]; then
+  if [[ $LAST_ECODE == "0" ]]; then
     return
   fi
 
-  if [ $LAST_ECODE == "130" ]; then
+  if [[ $LAST_ECODE == "130" ]]; then
     ECODE="SIGINT"
-  elif [ $LAST_ECODE == "143" ]; then
+  elif [[ $LAST_ECODE == "143" ]]; then
     ECODE="SIGTERM"
-  elif [ $LAST_ECODE == "147" ]; then
+  elif [[ $LAST_ECODE == "147" ]]; then
     ECODE="SIGSTOP"
   else
     ECODE=$LAST_ECODE
   fi
-
   echo -e "${ECODE_COLOR} ${ECODE} ${NOCOLOR} 👾"
 }
 
