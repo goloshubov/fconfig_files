@@ -2,7 +2,7 @@ pre-commit
 ansible
 ansible-lint
 ansible-runner-http
-ansible-rulebook
+#ansible-rulebook
 argcomplete
 requests
 kubernetes
