@@ -11,3 +11,11 @@ alias k_po_img="kubectl get pod -o jsonpath='{range .items[*]}{\"\nPod: \"}{.met
 alias k_rs_img="kubectl get rs -o jsonpath='{range .items[*]}{\"\nRS: \"}{.metadata.name}{\"\nNamespace: \"}{.metadata.namespace}{range .spec.template.spec.containers[*]}{\"\n\tContainer: \"}{.name}{\"\n\"}{\"\t\tImage:\"}{.image}{end}{\"\n\"}{end}'"
 
 PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
+
+# krew ns alternative
+function kns() {
+  kubectl config set-context --current --namespace=$1
+}
+
+alias k1="export STATUSLINE_K8S_SHOW=1"
+alias k0="export STATUSLINE_K8S_SHOW=0"
