@@ -7,3 +7,4 @@ venv() {
 alias ansible='venv ansible; ansible'
 alias ansible-playbook='venv ansible; ansible-playbook'
 alias ansible-lint='venv ansible; ansible-lint'
+alias ansible-config='venv ansible; ansible-config'
