@@ -48,7 +48,7 @@ theme = Adwaita Dark
 maximize = true
 gtk-titlebar-style = tabs
 focus-follows-mouse = true
-#gtk-wide-tabs = true
+gtk-wide-tabs = false
 
 # ghostty +list-fonts
 font-family = Adwaita Mono
