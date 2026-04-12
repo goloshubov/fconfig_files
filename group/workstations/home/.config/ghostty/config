@@ -42,8 +42,6 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-size = 10
-
 # ghostty +list-themes
 #theme = Operator Mono Dark
 theme = Adwaita Dark
@@ -51,3 +49,7 @@ maximize = true
 gtk-titlebar-style = tabs
 focus-follows-mouse = true
 #gtk-wide-tabs = true
+
+# ghostty +list-fonts
+font-family = Adwaita Mono
+font-size = 11
