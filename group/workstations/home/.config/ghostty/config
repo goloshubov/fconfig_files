@@ -50,3 +50,4 @@ theme = Adwaita Dark
 maximize = true
 gtk-titlebar-style = tabs
 focus-follows-mouse = true
+#gtk-wide-tabs = true
