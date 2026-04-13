@@ -42,12 +42,15 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
+term=xterm
+
 # ghostty +list-themes
+#theme = Atom One Dark
 #theme = Operator Mono Dark
 theme = Adwaita Dark
 #maximize = true
-window-height = 40
-window-width = 120
+window-height = 44
+window-width = 132
 gtk-titlebar-style = tabs
 focus-follows-mouse = true
 gtk-wide-tabs = false
