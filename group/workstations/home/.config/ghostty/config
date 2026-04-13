@@ -45,7 +45,9 @@
 # ghostty +list-themes
 #theme = Operator Mono Dark
 theme = Adwaita Dark
-maximize = true
+#maximize = true
+window-height = 40
+window-width = 120
 gtk-titlebar-style = tabs
 focus-follows-mouse = true
 gtk-wide-tabs = false
