@@ -44,10 +44,13 @@ pwd_segment() {
 }
 
 git_segment() {
-  BRANCH="$( git branch --show-current 2>/dev/null )"
+  #BRANCH="$( git branch --show-current 2>/dev/null )"
+  BRANCH="$( git branch -l 2>/dev/null | grep '*')"
   if [[ -z "$BRANCH" ]]; then
     return
   fi
+
+  BRANCH="$(echo "${BRANCH}" | sed 's/* //')"
 
   if [[ -n "$( git status -s )" ]]; then
     echo -e "${BRANCH_DIRTY_COLOR} ⌥ ${BRANCH} * ${NOCOLOR}"
