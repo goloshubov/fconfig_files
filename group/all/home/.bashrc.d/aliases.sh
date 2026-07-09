@@ -26,3 +26,5 @@ alias phosphor='while true; do for filename in $(find $PHOSPHOR_PATH -type f,l);
 
 #bat --plain --paging=never'
 alias bat='bat -pp'
+
+alias tree_dL4='tree -d -L 4'
